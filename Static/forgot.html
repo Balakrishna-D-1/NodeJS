@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<script>
+			function Register() {
+				var OTP =
+					document.forms["RegForm"]["OTP"];
+				var Npass =
+					document.forms["RegForm"]["Npass"];
+				var Cpass =
+					document.forms["RegForm"]["Cpass"];
+	
+
+				if (OTP.value == "") {
+					window.alert("Please enter your OTP.");
+					OTP.focus();
+					return false;
+				}
+
+				if (Npass.value == "") {
+					window.alert(
+					"Please enter a new password.");
+					Npass.focus();
+					return false;
+				}
+				if (Cpass.value == "") {
+					window.alert("Please enter confirm password");
+					Cpass.focus();
+					return false;
+				}
+                if(Npass.value === Cpass.value) {
+				alert("Password reset Successfully");
+				return true;
+			}
+            else {
+              
+              }  alert("password not match");
+              return false;
+            }
+		</script>
+
+		<style>
+			div {
+				box-sizing: border-box;
+				width: 100%;
+				border: 100px solid black;
+				float: left;
+				align-content: center;
+				align-items: center;
+			}
+
+			form {
+				margin: 0 auto;
+				width: 600px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 style="text-align: center;">Reset Password Here</h1>
+		<form name="RegForm" action="/login"
+			onsubmit="return Register()" method="post">
+			<p>Enter OTP: <input type="text"
+							size="65" name="OTP" /></p>
+			<br>
+			<p>Enter New Password : <input type="password"
+							size="65" name="Npass" /></p>
+			<br />
+			<p>confirm Password: <input type="password"
+							size="65" name="Cpass" /></p>
+			<br />
+			<br />
+				<input type="submit"
+					value="Submit" name="Submit" />
+				<input type="reset"
+					value="Reset" name="Reset" />
+			</p>
+		</form>
+	</body>
+</html>
