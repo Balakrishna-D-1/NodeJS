@@ -40,5 +40,5 @@ http.createServer((req, res) => {
     
 res.end();
 }).listen(process.env.PORT, () => {
-    console.log("server started port 8080")
+    console.log("server started port 8080");
 });
